@@ -465,6 +465,7 @@
     if (existing) { existing.quantity += 1; showToast(`+1 "${product.name}" (${existing.quantity} шт.)`); }
     else { cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 }); showToast(`✅ "${product.name}" добавлен`); }
     renderCart();
+    ym(109719314, 'reachGoal', 'Add_to_Cart');
   }
   function clearCart() { if (cart.length && confirm('Очистить корзину?')) { cart = []; renderCart(); showToast('Корзина очищена'); } else if (cart.length === 0) showToast('Корзина пуста'); }
 
